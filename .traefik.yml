@@ -1,0 +1,9 @@
+displayName: BPR Plugin
+type: middleware
+import: github.com/fojman/bpr
+summary: A plugin for custom request processing
+testData:
+  name: someValue
+  version: "a.b.c"
+  rtp: 99
+  super: puper
