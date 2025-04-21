@@ -6,7 +6,7 @@ services:
       - --providers.docker
       - --log.level=DEBUG
       - --accesslog
-      - --experimental.localPlugins.rewrite.moduleName=github.com/fojman/rewrite
+      - --experimental.localPlugins.bpr.moduleName=github.com/fojman/bpr
 
     ports:
       - 80:80
@@ -21,10 +21,10 @@ services:
     command: >-
       -name whoami -verbose true
     labels:
-      traefik.http.routers.rewrite.rule: Host(`rw.localhost`)
-      traefik.http.routers.rewrite.middlewares: rewrite
+      traefik.http.routers.bpr.rule: Host(`rw.localhost`)
+      traefik.http.routers.bpr.middlewares: rewrite
 
-      traefik.http.middlewares.rewrite.plugin.rewrite.providers[0].name: pm
-      traefik.http.middlewares.rewrite.plugin.rewrite.providers[0].version: 1.1.1
-      traefik.http.middlewares.rewrite.plugin.rewrite.providers[0].rtp: 22
-      traefik.http.middlewares.rewrite.plugin.rewrite.providers[0].super: zzzz
+      traefik.http.middlewares.bpr.plugin.bpr.providers[0].name: pm
+      traefik.http.middlewares.bpr.plugin.bpr.providers[0].version: 1.1.1
+      traefik.http.middlewares.bpr.plugin.bpr.providers[0].rtp: 22
+      traefik.http.middlewares.bpr.plugin.bpr.providers[0].super: zzzz

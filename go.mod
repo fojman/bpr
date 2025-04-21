@@ -1,4 +1,4 @@
-module gitlab.common.in.beplay.tech/devops/tools/bpr
+module github.com/fojman/bpr
 
 go 1.24
 

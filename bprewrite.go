@@ -1,5 +1,5 @@
 // Package rewrite contains custom BePlay rewrite logic.
-package rewrite
+package bpr
 
 import (
 	"context"
