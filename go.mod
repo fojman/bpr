@@ -1,4 +1,4 @@
-module github.com/fojman/rewrite
+module gitlab.common.in.beplay.tech/devops/tools/bpr
 
 go 1.24
 
